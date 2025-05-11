@@ -17,7 +17,11 @@ void GetMKObjectWindow::Draw(int outerWidth, int outerHeight, float uiScale) {
         try {
             // Try converting the char array to an int using std::stoi
             oID = std::stoi(id);
-            SetMessage(std::to_string(FindObjectPtr(oID)));
+            uintptr_t address =FindObjectPtr(oID);
+            char hexStr[20];
+
+            sprintf_s(hexStr, "0x%p", (void*)address);
+            SetMessage(hexStr);
         }
         catch (const std::invalid_argument& e) {
             SetMessage("ID Not an int");

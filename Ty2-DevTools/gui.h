@@ -2,6 +2,7 @@
 #include "Window.h"
 #include "pch.h"
 #include "GetMKObjectWindow.h"
+#include <cstdio>
 
 class GUI
 {
