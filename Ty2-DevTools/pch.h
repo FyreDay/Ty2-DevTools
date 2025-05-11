@@ -9,6 +9,7 @@
 
 // add headers that you want to pre-compile here
 #include "framework.h"
+#include <map>
 #include "imgui.h"
 #include "imgui_impl_opengl3.h"
 #include "imgui_internal.h"

@@ -70,6 +70,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnableManifest>true</VcpkgEnableManifest>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -96,6 +102,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\TygerMemory1\TygerMemory;$(ProjectDir)\extern\imgui;$(ProjectDir)\extern\imgui\backends;$(ProjectDir)\extern\imgui\misc\cpp;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -143,7 +150,9 @@
     <ClInclude Include="..\TygerFramework\TygerFrameworkAPI.h" />
     <ClInclude Include="..\TygerFramework\TygerFrameworkAPI.hpp" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="gui.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\extern\imgui\backends\imgui_impl_opengl3.cpp" />
@@ -151,6 +160,9 @@
     <ClCompile Include="..\extern\imgui\imgui.cpp" />
     <ClCompile Include="..\extern\imgui\misc\cpp\imgui_stdlib.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="GetMKObjectWindow.cpp" />
+    <ClCompile Include="GetMKObjectWindow.h" />
+    <ClCompile Include="gui.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

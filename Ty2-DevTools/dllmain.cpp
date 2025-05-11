@@ -1,5 +1,6 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include "pch.h"
+#include "gui.h"
 
 BOOL APIENTRY DllMain( HMODULE hModule,
                        DWORD  ul_reason_for_call,
@@ -18,6 +19,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
 }
 
 void TickBeforeGame(float deltaSeconds) {
+    GUI::DrawUI();
 }
 
 extern "C" __declspec(dllexport) bool TygerFrameworkPluginInitialize(TygerFrameworkPluginInitializeParam* param) {
@@ -26,7 +28,8 @@ extern "C" __declspec(dllexport) bool TygerFrameworkPluginInitialize(TygerFramew
         return false;
 
     API::AddTickBeforeGame(TickBeforeGame);
-    API::AddPluginWndProc((WndProcFunc)WndProc);
+    API::AddPluginImGuiWantCaptureMouse((ImGuiWantCaptureMouseFunc)GUI::ImGuiWantCaptureMouse);
+    //API::AddPluginWndProc((WndProcFunc)WndProc);
     API::LogPluginMessage(std::to_string(((int)API::Get()->param()->TyHModule)));
     return true;
 }
