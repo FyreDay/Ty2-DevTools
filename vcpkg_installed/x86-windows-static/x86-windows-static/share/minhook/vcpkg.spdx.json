@@ -1,0 +1,174 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/minhook-x86-windows-static-1.3.3#5-480e60a7-524b-4ccd-8cc5-1fd12ee4d676",
+  "name": "minhook:x86-windows-static@1.3.3#5 d28318b48298575858985603578b20888fcdc7b36b6367ad516a5db71a0ec450",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-2025-04-07-b8b513ba8778c918cff49c3e837aae5999d5d2aa"
+    ],
+    "created": "2025-04-10T02:36:26Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-2",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-3",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-3",
+      "relationshipType": "DEPENDENCY_MANIFEST_OF",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "minhook",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "1.3.3#5",
+      "downloadLocation": "git+https://github.com/microsoft/vcpkg@ad027a206e91d0fbb6c7bcadfdf1cc17e2b79e26",
+      "homepage": "https://github.com/TsudaKageyu/minhook",
+      "licenseConcluded": "BSD-2-Clause",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "The Minimalistic x86/x64 API Hooking Library for Windows.",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "minhook:x86-windows-static",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "d28318b48298575858985603578b20888fcdc7b36b6367ad516a5db71a0ec450",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "BSD-2-Clause",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-0",
+      "name": "TsudaKageyu/minhook",
+      "downloadLocation": "git+https://github.com/TsudaKageyu/minhook@v1.3.3",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "9f10c92a926a06cde1e4092b664a3aab00477e8b9f20cee54e1d2b3747fad91043d199a2753f7e083497816bbefc5d75d9162d2098dd044420dbca555e80b060"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-resource-1",
+      "name": "minhook-cmake-support.patch",
+      "packageFileName": "minhook-cmake-support.patch",
+      "downloadLocation": "https://github.com/TsudaKageyu/minhook/commit/3f2e34976c1685ee372a09f54c0c8c8f4240ef90.patch?full_index=1",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "7863c51a4563fbc3694149595a7ef301500a1b3b324cc5571b0843386c2fdb5ae10b7e830c9b9fcc973dd17f77f386fd1dedcd493ce8475d2dcf2c44bb7306d0"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "fileName": "./fix-cmake-version.patch",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "50717209ad334ecb198efe18f857c9f7c53355475e6f93052155cc29ef5ac852"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./fix-usage.patch",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "365bd1ba00b8032ef658b72a97095624e84b3557edd6402a6c89975d0f284040"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./portfile.cmake",
+      "SPDXID": "SPDXRef-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8b1f30298e6f99b00a3f6457bd4efb469faf1b6b474e2c4946d93c547ebdc4e0"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./vcpkg.json",
+      "SPDXID": "SPDXRef-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5e09174b0ac1fa10e7878e438aa0bef936262e8bb4701e4012a98423db638efe"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}

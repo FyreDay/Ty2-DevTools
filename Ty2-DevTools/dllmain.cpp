@@ -2,22 +2,6 @@
 #include "pch.h"
 #include "gui.h"
 
-BOOL APIENTRY DllMain( HMODULE hModule,
-                       DWORD  ul_reason_for_call,
-                       LPVOID lpReserved
-                     )
-{
-    switch (ul_reason_for_call)
-    {
-    case DLL_PROCESS_ATTACH:
-    case DLL_THREAD_ATTACH:
-    case DLL_THREAD_DETACH:
-    case DLL_PROCESS_DETACH:
-        break;
-    }
-    return TRUE;
-}
-
 void TickBeforeGame(float deltaSeconds) {
     GUI::DrawUI();
 }
@@ -29,7 +13,7 @@ extern "C" __declspec(dllexport) bool TygerFrameworkPluginInitialize(TygerFramew
 
     API::AddTickBeforeGame(TickBeforeGame);
     API::AddPluginImGuiWantCaptureMouse((ImGuiWantCaptureMouseFunc)GUI::ImGuiWantCaptureMouse);
-    //API::AddPluginWndProc((WndProcFunc)WndProc);
+    API::AddPluginWndProc((WndProcFunc)GUI::WndProc);
     API::LogPluginMessage(std::to_string(((int)API::Get()->param()->TyHModule)));
     return true;
 }

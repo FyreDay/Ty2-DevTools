@@ -1,0 +1,12 @@
+{
+    "name": "ty2-dev-tools",
+    "version-date": "2025-05-04",
+    "dependencies": [
+      "asio",
+      "minhook",
+      "nlohmann-json",
+      "openssl",
+      "zlib"
+    ]
+  }
+  
