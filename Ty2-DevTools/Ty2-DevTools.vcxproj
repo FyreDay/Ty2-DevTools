@@ -104,7 +104,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\TygerMemory1\TygerMemory;$(ProjectDir)..\extern\imgui;$(ProjectDir)..\extern\imgui\backends;$(ProjectDir)..\extern\imgui\misc\cpp;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\extern\imgui;$(ProjectDir)..\extern\imgui\backends;$(ProjectDir)..\extern\imgui\misc\cpp;</AdditionalIncludeDirectories>
       <ShowIncludes>true</ShowIncludes>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
